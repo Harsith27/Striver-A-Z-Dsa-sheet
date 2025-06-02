@@ -6,3 +6,6 @@ def factorial(n,fact=1):
 
 n=int(input())
 print(factorial(n))
+
+
+# we can also do return n*fact(n-1)

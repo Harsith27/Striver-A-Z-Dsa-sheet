@@ -1,6 +1,8 @@
 def fib_nterms(n,arr=[0,1]):
+    if n==1:
+        return [0]
     if len(arr)>=n:
-        return arr[:n]
+        return arr
     arr.append(arr[-1]+arr[-2])
     return fib_nterms(n,arr)
 

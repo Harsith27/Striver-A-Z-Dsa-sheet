@@ -1,11 +1,9 @@
-def reverse(arr,n,p1=0,p2=None):
-    if p2==None:
-        p2=n-1
+def reverse(arr,p1,p2):
     if p1>p2:
         return arr
     arr[p1],arr[p2]=arr[p2],arr[p1]
-    return reverse(arr,n,p1+1,p2-1)
+    return reverse(arr,p1+1,p2-1)
 
 n=int(input())
 arr=list(map(int,input().split()))
-print(reverse(arr,n))
+print(reverse(arr,0,n-1))
