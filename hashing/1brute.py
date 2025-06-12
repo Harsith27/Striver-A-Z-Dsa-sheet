@@ -1,5 +1,7 @@
 import time
 start = time.time()
+
+
 arr=list(map(int,input().split()))
 queries=list(map(int,input().split()))
 for q in queries:
@@ -8,6 +10,7 @@ for q in queries:
         if q==num:
             count+=1
     print(q,"->",count)
+
 
 print("Execution Time:", time.time() - start, "seconds")
 

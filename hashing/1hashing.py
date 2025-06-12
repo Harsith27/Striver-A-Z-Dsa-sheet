@@ -1,10 +1,13 @@
+def freq(arr,queries):    
+    mydict={}
+    for num in arr:
+        mydict[num]=mydict.get(num,0)+1
+    for q in queries:
+        print(q,"->",mydict.get(q,0))
+
 arr=list(map(int,input().split()))
 queries=list(map(int,input().split()))
-mydict={}
-for num in arr:
-    mydict[num]=mydict.get(num,0)+1
-for q in queries:
-    print(q,"->",mydict.get(q,0))
+freq(arr,queries)
 
 
 #approach 2
