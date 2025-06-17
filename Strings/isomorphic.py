@@ -6,8 +6,7 @@ def isomorphic(s,t):
                 return False
         else:
             mydict[i]=j
-    return len(set(mydict.values()))==len(mydict)
-
+    return len(set(mydict.values()))==len(mydict)     ### for the case of s=badc and t=bada where a and c map to the same value a which contradicts the stmt
 s=input()
 t=input()
 print(isomorphic(s,t))
