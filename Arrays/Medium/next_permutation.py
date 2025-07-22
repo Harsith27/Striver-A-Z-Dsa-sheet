@@ -9,8 +9,8 @@ def next_permutation(arr):
             j-=1
         arr[i],arr[j]=arr[j],arr[i]
     arr[i+1:]=list(reversed(arr[i+1:]))
-    print(arr)
+    return arr
 
 
 arr=list(map(int, input().split()))
-next_permutation(arr)
+print(next_permutation(arr))
