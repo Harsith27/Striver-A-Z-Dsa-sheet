@@ -1,3 +1,5 @@
+# check this you can reduce the redundancy by removing the search
+
 def floor_and_ceil_of_target(arr,k):
     l,r=0,len(arr)-1
     while(l<=r):
