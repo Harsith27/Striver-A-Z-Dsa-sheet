@@ -6,7 +6,7 @@ def canConstruct(target,wordBank,memo={}):
     for word in wordBank:
         if target.startswith(word):
             suffix = target[len(word):]
-            if canConstruct(suffix,wordBank)==True:
+            if canConstruct(suffix,wordBank,memo)==True:
                 memo[target]=True
     memo[target]=False
     return memo[target]
