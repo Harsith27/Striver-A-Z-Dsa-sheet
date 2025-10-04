@@ -13,3 +13,4 @@ def binary_search(arr,k):
 arr=list(map(int,input().split()))
 k=int(input())
 print(binary_search(arr,k))
+
