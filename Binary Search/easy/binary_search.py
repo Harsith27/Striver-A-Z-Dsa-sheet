@@ -9,8 +9,8 @@ def binary_search(arr,k):
             high=mid+1
         else:
             return "element found"
+    return "element Not found"
 
-arr=list(map(int,input().split()))
-k=int(input())
+arr=[1,2,3,4,5,6,7]
+k=8
 print(binary_search(arr,k))
-
