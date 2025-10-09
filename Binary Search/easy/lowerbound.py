@@ -8,7 +8,6 @@ def lowerbound(arr,k):
         else:
             r=mid
     return l
-
-arr=list(map(int,input().split()))
-k=int(input())
+arr=[1,2,4,4,4,5,6,7]
+k=8
 print(lowerbound(arr,k))

@@ -8,6 +8,8 @@ def search_insert_position(arr,k):
             r=mid
     return l
 
-arr=list(map(int,input().split()))
-k=int(input())
+arr=[1,2,4,4,4,5,6]
+k=4
 print(search_insert_position(arr,k))
+
+#Same as lower Bound

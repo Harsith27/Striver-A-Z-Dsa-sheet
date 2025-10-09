@@ -1,44 +1,19 @@
-# check this you can reduce the redundancy by removing the search
-
-def floor_and_ceil_of_target(arr,k):
-    l,r=0,len(arr)-1
-    while(l<=r):
-        mid=l+(r-l)//2
-        if arr[mid]>k:
-            r=mid-1
-        elif arr[mid]<k:
-            l=mid+1
-        else:
-            return arr[mid]
-    return False
-
-def lowerbound(arr,k):
-    l=0
-    r=len(arr)
+def floor_and_ceil(nums,k):
+    l,r=0,len(nums)
     while(l<r):
         mid=l+(r-l)//2
-        if arr[mid]<k:
+        if nums[mid]<k:
             l=mid+1
         else:
             r=mid
-    return arr[l-1]
+    if l < len(nums) and nums[l] == k:
+        floor = ceil = nums[l]
+    else:
+        floor = nums[l-1] if l > 0 else None
+        ceil = nums[l] if l < len(nums) else None
     
+    return floor, ceil
 
-def upperbound(arr,k):
-    l,r=0,len(arr)
-    while(l<r):
-        mid=l+(r-l)//2
-        if arr[mid]<=k:
-            l=mid+1
-        else:
-            r=mid
-    return arr[l]
-
-
-arr=list(map(int,input().split()))
-k=int(input())
-ans=floor_and_ceil_of_target(arr,k)
-if ans!=False:
-    print(ans,ans)
-else:
-    print(lowerbound(arr,k), upperbound(arr,k))
+nums=[3, 4, 4, 7, 8, 10]
+k=5
+print(floor_and_ceil(nums,k))
